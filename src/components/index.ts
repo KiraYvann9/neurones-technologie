@@ -6,6 +6,11 @@ import { CandidatureFormComponent } from "@/components/CandidatureFormComponent"
 import {PartenaireComponent} from "@/components/PartenaireComponent";
 import {DomaineFormation} from "@/components/DomaineFormation";
 import {Contact} from "@/components/Contact";
+import { SolutionComponent } from "./SolutionComponent";
+import {MinWidthWrapper} from "./MinWidthWrapper";
+import { FormationsComponent } from "./FormationsComponent";
+import { ConfianceComponent } from "./ConfianceComponent";
+import { TestimoniesComponent } from "./TestimoniesComponent";
 
 export {
     MaxWidthWrapper,
@@ -15,5 +20,10 @@ export {
     CandidatureFormComponent,
     PartenaireComponent,
     DomaineFormation,
-    Contact
+    Contact,
+    SolutionComponent,
+    MinWidthWrapper,
+    FormationsComponent,
+    ConfianceComponent,
+    TestimoniesComponent
 }

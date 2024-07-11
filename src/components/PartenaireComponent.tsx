@@ -13,12 +13,13 @@ export const PartenaireComponent = () => {
 
     const IMAGES = [cisco, fortinet, ibm, microsoft, nutanix, pecb]
     return (
-        <div className={'h-60 bg-gray-50 text-center py-8 flex flex-col items-center gap-10'}>
-            <h1 className={'text-3xl font-bold'}>Nos partenaires formations</h1>
-            <div className={'flex gap-4 flex-wrap'}>
+        
+        <div className={'h-60 text-center py-8 flex flex-col items-center gap-10 w-full'}>
+            <h1 className={'text-3xl font-bold'}>Nos partenaires en formations</h1>
+            <div className={'flex gap-8 flex-wrap w-full justify-center'}>
                 {
                     IMAGES.map((img)=>(
-                        <Image src={img} alt={''} className={'h-auto' } key={1} width={100} height={50}/>
+                        <Image src={img} alt={''} className={'h-auto w-[100px]' } key={1}/>
                     ))
                 }
             </div>

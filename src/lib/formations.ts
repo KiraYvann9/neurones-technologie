@@ -4,7 +4,7 @@ import {MonitorDotIcon, LightbulbIcon, HandCoinsIcon} from "lucide-react";
 export type formationType = {
     id: number,
     title: string,
-    icon : LucideIcon
+    icon : LucideIcon,
 }
 
 export const Formations: formationType[] = [
