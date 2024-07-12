@@ -8,10 +8,10 @@ export default function Home() {
 
         <div className={'fixed bottom-36  drop-shadow-lg left-[-48px] bg-custom-orange py-2 px-4 rotate-[-90deg] flex text-white'}>Votre avis compte</div>
 
-        <div className={'fixed w-full z-20'}>
+        {/* <div className={'fixed w-full z-20'}>
             <FirstNav/>
             <Navbar/>
-        </div>
+        </div> */}
 
         <MaxWidthWrapper className={'w-full flex flex-col items-center my-4'}>
           <HeroComponent/>

@@ -22,13 +22,14 @@ export const TestimoniesComponent = () => {
                         </p>
                     </div>
                 </div>
-                <div className='flext gap-2 w-full'>
-                    <span className='p-2 bg-custom-orange text-[11px] rounded-md block w-28'>Formateur Expérimenté</span>
+                <div className='flex gap-2 w-full mt-3'>
+                    <span className='p-2 bg-custom-orange text-[11px] rounded-md '>Formateur Expérimenté</span>
+                    <span className='p-2 bg-custom-orange text-[11px] rounded-md'>Formateur Expérimenté</span>
                     <span className='p-2 bg-custom-orange text-[11px] rounded-md'>Formateur Expérimenté</span>
                 </div>
             </div>
 
-            <div className='border bg-white h-[200px] w-1/2 p-4'>
+            <div className='border bg-white w-1/2 p-4'>
                 <div className='flex gap-4'>
                     <div className='w-[200px] h-auto border-2 border-custom-orange'>
                         <Image src={'/assets/testify/photo.jpg'} height={100} width={100} alt='' className='object-fill'/>
@@ -42,7 +43,11 @@ export const TestimoniesComponent = () => {
                         </p>
                     </div>
                 </div>
-                <div></div>
+                <div className='flex gap-2 w-full mt-3'>
+                    <span className='p-2 bg-custom-orange text-[11px] rounded-md '>Formateur Expérimenté</span>
+                    <span className='p-2 bg-custom-orange text-[11px] rounded-md'>Formateur Expérimenté</span>
+                    <span className='p-2 bg-custom-orange text-[11px] rounded-md'>Formateur Expérimenté</span>
+                </div>
             </div>
         </div>
 

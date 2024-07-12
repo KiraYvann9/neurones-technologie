@@ -11,6 +11,7 @@ import {MinWidthWrapper} from "./MinWidthWrapper";
 import { FormationsComponent } from "./FormationsComponent";
 import { ConfianceComponent } from "./ConfianceComponent";
 import { TestimoniesComponent } from "./TestimoniesComponent";
+import { ProjectForm } from "./ProjectForm";
 
 export {
     MaxWidthWrapper,
@@ -25,5 +26,6 @@ export {
     MinWidthWrapper,
     FormationsComponent,
     ConfianceComponent,
-    TestimoniesComponent
+    TestimoniesComponent,
+    ProjectForm
 }

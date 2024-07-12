@@ -59,9 +59,9 @@ export function Navbar() {
     return (
         <div className={'bg-white w-full flex justify-center'}>
             <MaxWidthWrapper className={'w-full flex h-20 border-t items-center justify-between'}>
-                <div>
+                <Link href={'/'}>
                     <Image src={logo} alt={'logo'} className={'w-[300px]'}/>
-                </div>
+                </Link>
                 <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
