@@ -22,8 +22,9 @@ const config = {
         'hero-bg': 'url("/assets/hero/hero_bg.webp")'
       },
       colors: {
-        'custom-black': '#2B2D2D',
-        'custom-orange': '#F99D1C',
+        'custom-blue':'#002060',
+        'custom-black': '#001030',
+        'custom-orange': '#f99d1c',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

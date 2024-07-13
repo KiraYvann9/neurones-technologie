@@ -49,8 +49,8 @@ export const ConfianceComponent = () => {
             <div className='flex justify-center gap-8 flex-wrap p-8'>
 
                 {
-                    LOGOS.map((logo: string)=>(
-                        <div key={logo}>
+                    LOGOS.map((logo)=>(
+                        <div key={1} className={'border-2 border-custom-orange object-contain h-[50px] rounded-3xl p-4 overflow-hidden'}>
                             <Image src={logo} width={50} height={30} alt='' />
                         </div>
                     ))

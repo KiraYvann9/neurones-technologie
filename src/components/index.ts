@@ -12,6 +12,7 @@ import { FormationsComponent } from "./FormationsComponent";
 import { ConfianceComponent } from "./ConfianceComponent";
 import { TestimoniesComponent } from "./TestimoniesComponent";
 import { ProjectForm } from "./ProjectForm";
+import { FooterComponent} from "@/components/FooterComponent";
 
 export {
     MaxWidthWrapper,
@@ -27,5 +28,6 @@ export {
     FormationsComponent,
     ConfianceComponent,
     TestimoniesComponent,
-    ProjectForm
+    ProjectForm,
+    FooterComponent
 }

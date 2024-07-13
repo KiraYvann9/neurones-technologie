@@ -3,7 +3,6 @@ import { MaxWidthWrapper, MinWidthWrapper, ProjectForm } from "@/components"
 export default function Contact(){
     return(
         <div className="w-full h-full pt-[135px] flex flex-col items-center">
-
             <MinWidthWrapper className="w-full h-screen ">
                 <div className="bg-blue-950 h-40 w-full p-8"> 
                     <h1 className="text-3xl font-bold text-white">Contact</h1>
@@ -17,7 +16,6 @@ export default function Contact(){
                     </div>
                 </div>
             </MinWidthWrapper>
-            
         </div>
     )
 }
