@@ -11,7 +11,7 @@ export type solutionType = {
   id: number,
   title: string,
   description: string,
-  icon: LucideIcon | IconType,
+  icon: string,
   border:string
 }
 
@@ -21,15 +21,15 @@ export const solutions: solutionType[] = [
     title: "Formations Intra entreprise",
     description:
       "En tant que organisation, vous disposez d’un éventail de 220 formations de choix, que nous pouvons organiser au profit de vos équipes. La formation choisie est organisée à une date, un lieu (au sein de votre entreprise, dans nos salles de formation ou dans un hôtel…) de votre choix",
-    icon: Award,
-    border: 'border-white'
+    icon: '/assets/home/solution/intra.png',
+    border: 'border-white bg-blue-900'
   },
   {
     id: 2,
     title: "Formations Inter entreprise",
     description:
       "Vous êtes professionnel et souhaitez booster votre carrière par la formation ? Vous êtes une entreprise et souhaitez former quelques-uns de vos collaborateurs via nos sessions de formations programmées ? Profitez de +220 formations organisées en présentiel dans les salles de formations Neurones Academy et à distance.",
-    icon: MessagesSquareIcon,
+    icon: '/assets/home/solution/inter.png',
     border: 'border-purple-700'
   },
   {
@@ -37,7 +37,7 @@ export const solutions: solutionType[] = [
     title: "Certifications internationales",
     description:
       "Avec +40 partenaires internationaux (PECB, PMI, MICROSOFT, CISCO, LEAN SIX SIGMA®, CompTIA®, EC-COUNCIL….), nous offrons aux professionnels et aux entreprises des formations préparatoires aux certifications internationales les plus prestigieuses.",
-    icon: PiCertificateLight,
+    icon: '/assets/home/solution/certif.png',
     border: 'border-blue-500'
   },
   {
@@ -45,7 +45,7 @@ export const solutions: solutionType[] = [
     title: "Formations à la carte",
     description:
       "Vous avez des défis spécifiques à relever et souhaitez discuter d’une offre de formation sur-mesure pour votre organisation ? Nos Experts Scale Advisor se feront le plaisir de vous rencontrer pour en discuter.",
-    icon: IoDiamondOutline,
+    icon: '/assets/home/solution/formation.png',
     border: 'border-red-500'
   },
   {
@@ -53,7 +53,7 @@ export const solutions: solutionType[] = [
     title: "Neurones Talents",
     description:
       "Afin de répondre aux besoins en ressources humaines qualifiées, nous recyclons via le programme Neurones Talents, des ingénieurs (Cloud, Cybersécurité, Réseaux et Télécoms, DevOps) que nous mettons à la disposition d’entreprises clients.",
-    icon: LuBrainCircuit,
+    icon: '/assets/home/solution/neurones.png',
     border: 'border-green-500'
   }
 ];

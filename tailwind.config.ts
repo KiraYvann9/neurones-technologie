@@ -19,11 +19,18 @@ const config = {
     },
     extend: {
       backgroundImage:{
-        'hero-bg': 'url("/assets/hero/hero_bg.webp")'
+        'hero-bg': 'url("/assets/home/hero/img1.png")',
+        'hero-bg2': 'url("/assets/home/hero/img2.png")',
+        'hero-bg3': 'url("/assets/home/hero/img3.png")',
+        'domaine-bg': 'url("/assets/home/bg-design/domaine.png")',
+        'contact-bg': 'url("/assets/home/bg-design/contact.png")',
+        'solution-bg': 'url("/assets/home/bg-design/solution.png")',
+        'footer-bg': 'url("/assets/home/bg-design/footer.png")',
+        'testy-bg': 'url("/assets/home/bg-design/testy.png")',
       },
       colors: {
         'custom-blue':'#002060',
-        'custom-black': '#001030',
+        'custom-black': '#2F2E2C',
         'custom-orange': '#f99d1c',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

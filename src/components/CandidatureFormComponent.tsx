@@ -36,7 +36,7 @@ const formSchema = z.object({
     ville: z.string()
 })
 
-export function CandidatureFormComponent() {
+export function CandidatureFormComponent({className}:{className?: string}) {
 
     const [date, setDate] = useState<Date>()
 
@@ -56,7 +56,7 @@ export function CandidatureFormComponent() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-white p-4 rounded-md flex flex-col justify-center">
+            <form onSubmit={form.handleSubmit(onSubmit)} className={cn("space-y-8 bg-white p-4 rounded-md flex flex-col justify-center w-[90%] sm:w-auto", className)}>
                 <FormField
                     control={form.control}
                     name="username"
@@ -64,7 +64,7 @@ export function CandidatureFormComponent() {
                         <FormItem>
                             <FormLabel>Votre spécialité</FormLabel>
                             <FormControl>
-                                <Input placeholder="..." {...field} />
+                                <Input placeholder="..." {...field} className={'bg-gray-950 text-white'}/>
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -75,7 +75,7 @@ export function CandidatureFormComponent() {
                         control={form.control}
                         name="session"
                         render={({ field }) => (
-                            <FormItem>
+                            <FormItem className={'flex flex-col'}>
                                 <FormLabel>Session</FormLabel>
                                 <FormControl>
                                     <Popover>
@@ -83,7 +83,7 @@ export function CandidatureFormComponent() {
                                             <Button
                                                 variant={"outline"}
                                                 className={cn(
-                                                    "w-[160px] justify-start text-left font-normal",
+                                                    "w-[160px] justify-start text-left font-normal bg-gray-950 text-white",
                                                     !date && "text-muted-foreground"
                                                 )}
                                             >
@@ -109,10 +109,10 @@ export function CandidatureFormComponent() {
                         control={form.control}
                         name="ville"
                         render={({ field }) => (
-                            <FormItem>
+                            <FormItem className={'flex flex-col'}>
                                 <FormLabel>Ville</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="..." {...field} />
+                                    <Input placeholder="..." {...field} className={'bg-gray-950 text-white'}/>
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>

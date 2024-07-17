@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn('relative min-h-screen',inter.className)}>
-        <div className={'fixed w-full z-20 drop-shadow-md'}>
+        <div className={'fixed w-full z-30 drop-shadow-md'}>
             <FirstNav/>
             <Navbar/>
         </div>

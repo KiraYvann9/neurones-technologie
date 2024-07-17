@@ -12,7 +12,7 @@ import { IoLogoYoutube } from "react-icons/io";
 export const FooterComponent = () =>{
     return(
 
-        <MaxWidthWrapper className={'w-full flex flex-col items-center'}>
+        <MaxWidthWrapper className={'w-full flex flex-col items-center bg-footer-bg bg-cover bg-center bg-no-repeat border-t'}>
             <MinWidthWrapper className={'w-full '}>
                 <div className={'flex flex-wrap py-8 px-2 sm:px-10 justify-between gap-4 w-full'}>
                     <div className={'space-y-4 w-[46%] sm:flex-1'}>
@@ -95,7 +95,7 @@ export const FooterComponent = () =>{
 
             </MinWidthWrapper>
 
-            <MaxWidthWrapper className={'w-full h-10 flex justify-between items-center bg-custom-orange px-8 text-[12px] sm:text-sm '}>
+            <MaxWidthWrapper className={'w-full h-10 flex justify-between items-center bg-custom-orange px-8 text-[10px] sm:text-[12px] sm:text-sm '}>
                 <span>© Neurones Academy - 2024</span>
                 <div className={'space-x-4 '}>
                     <strong className={'whitespace-nowrap'}>Mentions légales</strong>

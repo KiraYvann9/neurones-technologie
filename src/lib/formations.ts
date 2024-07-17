@@ -4,68 +4,68 @@ import {MonitorDotIcon, LightbulbIcon, HandCoinsIcon} from "lucide-react";
 export type formationType = {
     id: number,
     title: string,
-    icon : LucideIcon,
+    icon : string,
 }
 
 export const Formations: formationType[] = [
     {
         id: 1,
         title:'Bureautique',
-        icon: MonitorDotIcon,
+        icon: '/assets/home/domaine/bureau.png',
     },
     {
         id: 2,
         title:'Management de projets',
-        icon: LightbulbIcon,
+        icon: '/assets/home/domaine/manage.png',
     },
     {
         id: 3,
         title:'PECB Normes ISO',
-        icon: HandCoinsIcon,
+        icon: '/assets/home/domaine/pecb.png',
     },
     {
         id: 4,
         title:'Cybersécutité',
-        icon: LightbulbIcon,
+        icon: '/assets/home/domaine/cyber.png',
     },
     {
         id: 5,
         title:'Cloud & Virtualisation',
-        icon: MonitorDotIcon,
+        icon: '/assets/home/domaine/cloud.png',
     },
     {
         id: 6,
         title:'Infrastructures réseaux, datacenter et collaboration',
-        icon: LightbulbIcon,
+        icon: '/assets/home/domaine/infra.png',
     },
     {
         id: 7,
         title:'Bases de données et stockage',
-        icon: MonitorDotIcon,
+        icon: '/assets/home/domaine/base.png',
     },
     {
         id: 8,
         title:'Intelligence Artificielle',
-        icon: LightbulbIcon,
+        icon: '/assets/home/domaine/ai.png',
     },
     {
         id: 9,
         title:'Digital, Marketing Digital et Transformation Digitale',
-        icon: MonitorDotIcon,
+        icon: '/assets/home/domaine/digital.png',
     },
     {
         id: 10,
         title:'Logiciel et ERP',
-        icon: LightbulbIcon,
+        icon: '/assets/home/domaine/logi.png',
     },
     {
         id: 11,
         title:'Relation client',
-        icon: MonitorDotIcon,
+        icon: '/assets/home/domaine/relation.png',
     },
     {
         id: 12,
         title:'Soft skills',
-        icon: LightbulbIcon,
+        icon: '/assets/home/domaine/soft.png',
     },
 ]
