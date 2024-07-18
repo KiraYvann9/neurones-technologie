@@ -6,11 +6,27 @@ import { Button } from './ui/button';
 import Image from 'next/image';
 
 export const FormationsComponent = () => {
+
+    function numStr(a:any, b:string) {
+        a = '' + a;
+        b = b || ' ';
+        var c = '',
+            d = 0;
+        while (a.match(/^0[0-9]/)) {
+            a = a.substr(1);
+        }
+        for (var i = a.length-1; i >= 0; i--) {
+            c = (d != 0 && d % 3 == 0) ? a[i] + b + c : a[i] + c;
+            d++;
+        }
+        return c;
+    }
+
   return (
     <MinWidthWrapper className='w-full p-10 sm:p-20 bg-custom-black space-y-8'>
-        <h1 className='text-white font-semibold text-2xl ml-24'>Nos formations du moment</h1>
+        <h1 className='text-white font-semibold text-2xl ml-8'>Nos formations du moment</h1>
 
-        <div className='flex gap-4 justify-center flex-wrap '>
+        <div className='flex justify-center gap-4 flex-wrap '>
           {
             currentFormation.map((formation: currentFormationType)=>(
               <div key={formation?.id} className=' w-full sm:w-[343px] h-auto sm:h-[455px] bg-white p-4 rounded-md border space-y-4 flex flex-col justify-between'>
@@ -19,9 +35,8 @@ export const FormationsComponent = () => {
                   <Image className='w-full h-full' src={formation?.img}  width={250} height={250} alt=''/>
                 </div>
                 <div className='flex gap-3.5'>
-                  <div className='flex flex-1 flex-col'>
-                    <span className='text-sm '>{formation?.description}</span>
-:
+                  <div className='flex flex-1 flex-col h-full justify-between'>
+                    <span className='text-[13px] '>{formation?.description}</span>
                     <Button className='bg-custom-orange p-2 text-sm mt-2'>Voir la formation</Button>
                   </div>
 
@@ -63,13 +78,13 @@ export const FormationsComponent = () => {
                                   points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                           </svg>
                       </div>
-                      <span className={'text-sm mb-3'}>4,7/5(440 avis)</span>
+                      <span className={'text-[13px] mb-3'}>4,7/5(440 avis)</span>
                       <div className='flex items-center gap-1 border-t border-b p-2'>
                           <formation.timeIcon/>
-                          <p className='text-sm'>{formation.date1} ou {formation.date2}</p>
+                          <p className='text-[13px]'>{formation.date1} ou {formation.date2}</p>
                       </div>
-                      <div className='flex flex-col gap-4'>
-                          <strong>{formation?.price}F CFA HT</strong>
+                      <div className='flex flex-col gap-4 '>
+                          <strong >{numStr(formation?.price, '.')}FCFA HT</strong>
                           <span className={'text-sm'}>Demander un devis</span>
                       </div>
                   </div>
@@ -78,7 +93,7 @@ export const FormationsComponent = () => {
             ))
           }
         </div>
-        <div className={'w-full flex pr-24 justify-end'}>
+        <div className={'w-full flex pr-8 justify-end'}>
             <Button variant={'outline'} className='border bg-transparent text-white '>Découvrir le catalogue</Button>
         </div>
 

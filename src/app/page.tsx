@@ -5,7 +5,7 @@ import {
     Contact,
     DomaineFormation,
     FormationsComponent,
-    HeroComponent,
+    HeroComponent, InfiniteScroll,
     MaxWidthWrapper,
     Navbar,
     PartenaireComponent,

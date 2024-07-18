@@ -41,20 +41,23 @@ export const ConfianceComponent = () => {
     // })
 
   return (
-    <MaxWidthWrapper className='flex w-full justify-center p-8 '>
-        <MinWidthWrapper className='w-full'>
-            <h1 className='text-2xl font-bold'>Il nous font confiance</h1>
-            <div className='flex justify-center gap-8 flex-wrap p-2 sm:p-8'>
+    <div className={'flex h-full w-full bg-confiance-bg bg-no-repeat bg-cover bg-center'}>
+        <MaxWidthWrapper className='flex w-full justify-center p-8 '>
 
-                {
-                    LOGOS.map((logo)=>(
-                        <div key={1} className={'border-2 border-custom-orange object-contain h-[61px] w-[143px] flex justify-center items-center rounded-[40px] p-4 overflow-hidden'}>
-                            <Image src={logo}  alt='' objectFit={'cover'} className={'w-auto h-[46px]'}/>
-                        </div>
-                    ))
-                }
-            </div>
-        </MinWidthWrapper>
-    </MaxWidthWrapper>
+                <MinWidthWrapper className='w-full'>
+                    <h1 className='text-2xl font-bold'>Il nous font confiance</h1>
+                    <div className='flex justify-center gap-8 flex-wrap p-2 sm:p-8'>
+
+                        {
+                            LOGOS.map((logo)=>(
+                                <div key={1} className={'border-2 border-custom-orange bg-white object-contain h-[61px] w-[143px] flex justify-center items-center rounded-[40px] p-4 overflow-hidden'}>
+                                    <Image src={logo}  alt='' objectFit={'cover'} className={'w-auto h-[46px]'}/>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </MinWidthWrapper>
+        </MaxWidthWrapper>
+    </div>
   )
 }

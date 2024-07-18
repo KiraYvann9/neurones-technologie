@@ -44,6 +44,7 @@ import {
 } from "@/components/ui/accordion"
 
 import {MenuIcon, SearchIcon, ShoppingBagIcon, ShoppingCartIcon, UserIcon} from "lucide-react";
+import {MinWidthWrapper} from "@/components/MinWidthWrapper";
 const components: { title: string; href: string; description: string }[] = [
     {
         title: "Alert Dialog",
@@ -85,7 +86,7 @@ const components: { title: string; href: string; description: string }[] = [
 export function Navbar() {
     return (
         <div className={'bg-white w-full flex justify-center'}>
-            <MaxWidthWrapper className={'w-full flex gap-4 h-20 border-t items-center justify-between relative'}>
+            <MinWidthWrapper className={'w-full flex gap-4 h-20 border-t items-center justify-between relative'}>
                 <Link href={'/'}>
                     <Image src={logo} alt={'logo'} className={'hidden sm:block w-[150px]'}/>
                     <Image src={logo} alt={'logo'} className={'w-[100px] sm:hidden'}/>
@@ -159,23 +160,33 @@ export function Navbar() {
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
+                            <NavigationMenuTrigger>Vous êtes</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                    {components.map((component) => (
+                                        <ListItem
+                                            key={component.title}
+                                            title={component.title}
+                                            href={component.href}
+                                        >
+                                            {component.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
                             <Link href="/docs" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     Neurone Talents
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/docs" legacyBehavior passHref>
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    Vous êtes
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
+
                     </NavigationMenuList>
                 </NavigationMenu>
 
-                <div className={'flex space-x-5 ml-auto sm:mr-4 '}>
+                <div className={'flex space-x-5 ml-auto sm:mr-4 sm:hidden'}>
                     <Popover>
                         <PopoverTrigger asChild>
                             <SearchIcon size={26}/>
@@ -242,7 +253,7 @@ export function Navbar() {
                         </SheetContent>
                     </Sheet>
                 </div>
-            </MaxWidthWrapper>
+            </MinWidthWrapper>
 
 
         </div>

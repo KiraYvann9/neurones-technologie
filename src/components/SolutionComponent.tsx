@@ -10,8 +10,8 @@ export const SolutionComponent = () => {
 
       <div className={'max-w-screen-xl w-full bg-custom-orange bg-solution-bg bg-center h-[852]'}>
 
-        <MinWidthWrapper className='space-y-4 w-full p-10'>
-            <h1 className='text-3xl text-center'>Nos solutions</h1>
+        <MinWidthWrapper className='space-y-8 w-full p-10'>
+            <h1 className='text-3xl ml-24 font-bold'>Nos solutions</h1>
             <div className='flex flex-wrap justify-center gap-4 items-center '>
               {
                 solutions.map((solution: solutionType)=>(

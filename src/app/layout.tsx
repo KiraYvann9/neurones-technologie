@@ -23,7 +23,9 @@ export default function RootLayout({
             <FirstNav/>
             <Navbar/>
         </div>
-        {children}
+        <main className={'min-h-screen'}>
+            {children}
+        </main>
         <FooterComponent/>
       </body>
     </html>

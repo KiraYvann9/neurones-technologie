@@ -60,9 +60,9 @@ export default function Contact(){
     })
 
     return(
-        <div className="flex flex-col items-center w-full pt-20 sm:pt-32">
+        <div className="flex flex-col items-center w-full pt-20 sm:pt-32 bg-custom-blue bg-auth-bg bg-contain bg-left-bottom bg-no-repeat">
             
-            <MaxWidthWrapper className="bg-custom-blue min-h-screen w-full flex justify-center items-start pb-8">
+            <MaxWidthWrapper className="min-h-screen w-full flex justify-center items-start pb-8">
 
                 <Tabs defaultValue="account" className="w-[700px] space-y-8 min-h-full justify-start mt-16">
                     <TabsList className="grid w-full grid-cols-2 bg-transparent gap-4">

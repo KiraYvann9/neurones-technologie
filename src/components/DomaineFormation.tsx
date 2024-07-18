@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export const DomaineFormation = () => {
     return (
-        <div className={'w-full bg-custom-black bg-domaine-bg bg-cover bg-no-repeat p-8 flex flex-col items-center '}>
-            <MinWidthWrapper className='h-full flex flex-col justify-between'>
-                <h1 className={'text-xl text-center mb-4 text-white'}>Découvrez tous nos domaines de formation</h1>
-                <div className={'w-full flex flex-wrap gap-4 justify-center mt-auto'}>
+        <div className={'w-full bg-custom-black bg-domaine-bg bg-cover bg-no-repeat p-14 flex flex-col items-center '}>
+            <MinWidthWrapper className='h-full flex flex-col justify-between gap-8'>
+                <h1 className={'text-3xl mb-4 text-white font-bold'}>Découvrez tous nos domaines de formation</h1>
+                <div className={'w-full flex flex-wrap gap-8 justify-between mt-auto'}>
                     {
                         Formations.map((formation: formationType)=>(
                             // <div key={1}></div>

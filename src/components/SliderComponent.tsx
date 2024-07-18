@@ -35,7 +35,7 @@ export const SliderComponent = () => {
 
                     <SwiperSlide key={slider.id}  className={cn('relative z-0 min-h-screen bg-center bg-cover w-full border bg-no-repeat overflow-hidden', slider.img)}>
 
-                        <div className={'bg-gray-950/50 h-full w-full flex items-end absolute bottom-0'}>
+                        <div className={'h-full w-full flex items-end absolute bottom-0'}>
                             <div className={'w-[90%] sm:w-1/4 flex flex-col gap-2 ml-5 sm:ml-20 relative bottom-80 sm:bottom-96'}>
                                 <h1 className={'text-3xl text-custom-orange'}>{slider.title} </h1>
                                 <h2 className={'text-2xl text-white font-bold'}>{slider.subtitle}</h2>

@@ -1,5 +1,9 @@
 import type { Config } from "tailwindcss"
 
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -18,6 +22,7 @@ const config = {
       },
     },
     extend: {
+
       backgroundImage:{
         'hero-bg': 'url("/assets/home/hero/img1.png")',
         'hero-bg2': 'url("/assets/home/hero/img2.png")',
@@ -27,6 +32,23 @@ const config = {
         'solution-bg': 'url("/assets/home/bg-design/solution.png")',
         'footer-bg': 'url("/assets/home/bg-design/footer.png")',
         'testy-bg': 'url("/assets/home/bg-design/testy.png")',
+        'auth-bg': 'url("/assets/home/bg-design/auth.png")',
+        'confiance-bg': 'url("/assets/home/bg-design/confiance.png")',
+        'formation-hero-bg': 'url("/assets/formation_detail/bg-design/hero.png")',
+        'formation-section1': 'url("/assets/formation_detail/bg-design/section1.png")',
+        'formation-section2': 'url("/assets/formation_detail/bg-design/section2.png")',
+        'formation-section3': 'url("/assets/formation_detail/bg-design/section3.png")',
+        'formation-section4': 'url("/assets/formation_detail/bg-design/section4.png")',
+        'formation-section5': 'url("/assets/formation_detail/bg-design/section5.png")',
+        'formation-section6': 'url("/assets/formation_detail/bg-design/section6.png")',
+        'formation-section7': 'url("/assets/formation_detail/bg-design/section7.png")',
+        'formation-section8': 'url("/assets/formation_detail/bg-design/section8.png")',
+        'catalogue-bg1': 'url("/assets/formation_detail/girl2.png")',
+      },
+      listStyleType:{
+        square: 'square',
+        roman: 'upper-roman',
+        arrow: '>'
       },
       colors: {
         'custom-blue':'#002060',
@@ -80,14 +102,30 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config
 
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+      Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
 export default config

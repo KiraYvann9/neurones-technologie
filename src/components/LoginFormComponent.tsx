@@ -39,10 +39,16 @@ export const LoginFormComponent = () =>{
                 <h1 className="text-xl font-bold">Qu&apos;allez vous trouver sur votre compte ?</h1>
 
                 <ul className="space-y-2 list-disc">
-                    <li>L&apos;historique de vos achats</li>
-                    <li>Le suivi de vos commandes</li>
-                    <li>Les documents administratifs de vos inscriptions (convention, feuille d&apos;émargement, duplicata de facture...)</li>
-                    <li>Nos catalogues</li>
+                    <li>Vos documents administratifs (devis, factures, reçu de paiement, etc.)</li>
+                    <li>Votre calendrier détaillé de formation</li>
+                    <li>Vos discussions avec les formateurs</li>
+                    <li>Vos discussions avec les autres participants à votre formation</li>
+                    <li>L&apos;historique et le suivi de vos commandes</li>
+                    <li>Vos certificats de formation</li>
+                    <li>Le suivi de vos réclamations </li>
+                    <li>Nos catalogues </li>
+                    <li>Nos offres exclusives </li>
+                    <li>Et bien plus encore… </li>
                 </ul>
             </div>
         </Card>
