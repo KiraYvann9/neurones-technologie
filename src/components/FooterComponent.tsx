@@ -13,7 +13,7 @@ import {Button} from "@/components/ui/button";
 export const FooterComponent = () =>{
     return(
 
-        <MaxWidthWrapper className={'w-full flex flex-col items-center bg-footer-bg bg-cover bg-center bg-no-repeat border-t'}>
+        <MaxWidthWrapper className={'w-full flex flex-col items-center bg-footer-bg bg-cover bg-center bg-no-repeat border-t overflow-hidden'}>
             <MinWidthWrapper className={'w-full'}>
                 <div className={'flex flex-wrap py-8 px-2 justify-between gap-4 w-full'}>
                     <div className={' w-[46%] sm:flex-1'}>
@@ -52,7 +52,7 @@ export const FooterComponent = () =>{
                         <h1 className={'text-xl font-bold'}>Contactez-nous :</h1>
                         <div>
                             <strong>Côte d&apos;Ivoire</strong>
-                            <ul className={'text-sm'}>
+                            <ul className={'text-sm '}>
                                 <li>Angré, 8ème Tranche, Abidjan</li>
                                 <li>(+225) 27 22 42 90 90</li>
                                 <li>(+225 ) 07 88 88 61 61</li>

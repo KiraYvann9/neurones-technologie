@@ -9,7 +9,7 @@ export const MaxWidthWrapper = ({
     children: React.ReactNode
 }) => {
     return (
-        <div className={cn('max-w-screen-2xl px-4', className)}>
+        <div className={cn('max-w-screen-2xl p-0 sm:px-4', className)}>
             {children}
         </div>
     );

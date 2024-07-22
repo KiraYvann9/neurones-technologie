@@ -1,30 +1,33 @@
+
+
 import React from 'react'
 import { MinWidthWrapper } from './MinWidthWrapper'
 
 import { currentFormation, currentFormationType } from '@/lib/currentFormations';
 import { Button } from './ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const FormationsComponent = () => {
 
-    function numStr(a:any, b:string) {
-        a = '' + a;
-        b = b || ' ';
-        var c = '',
-            d = 0;
-        while (a.match(/^0[0-9]/)) {
-            a = a.substr(1);
-        }
-        for (var i = a.length-1; i >= 0; i--) {
-            c = (d != 0 && d % 3 == 0) ? a[i] + b + c : a[i] + c;
-            d++;
-        }
-        return c;
-    }
+  function separateur(a:any, b:string) {
+      a = '' + a;
+      b = b || ' ';
+      var c = '',
+          d = 0;
+      while (a.match(/^0[0-9]/)) {
+          a = a.substr(1);
+      }
+      for (var i = a.length-1; i >= 0; i--) {
+          c = (d != 0 && d % 3 == 0) ? a[i] + b + c : a[i] + c;
+          d++;
+      }
+      return c;
+  }
 
   return (
     <MinWidthWrapper className='w-full p-10 sm:p-20 bg-custom-black space-y-8'>
-        <h1 className='text-white font-semibold text-2xl ml-8'>Nos formations du moment</h1>
+        <h1 className='text-white font-semibold text-2xl ml-0 sm:ml-8'>Nos formations du moment</h1>
 
         <div className='flex justify-center gap-4 flex-wrap '>
           {
@@ -37,7 +40,7 @@ export const FormationsComponent = () => {
                 <div className='flex gap-3.5'>
                   <div className='flex flex-1 flex-col h-full justify-between'>
                     <span className='text-[13px] '>{formation?.description}</span>
-                    <Button className='bg-custom-orange p-2 text-sm mt-2'>Voir la formation</Button>
+                    <Link href={`/formation/${formation.id}`} className='bg-custom-orange p-2 text-sm mt-2 text-center'>Voir la formation</Link>
                   </div>
 
                   <div className='flex flex-1 flex-col justify-between items-end h-full '>
@@ -84,7 +87,7 @@ export const FormationsComponent = () => {
                           <p className='text-[13px]'>{formation.date1} ou {formation.date2}</p>
                       </div>
                       <div className='flex flex-col gap-4 '>
-                          <strong >{numStr(formation?.price, '.')}FCFA HT</strong>
+                          <strong >{separateur(formation?.price, '.')}FCFA HT</strong>
                           <span className={'text-sm'}>Demander un devis</span>
                       </div>
                   </div>

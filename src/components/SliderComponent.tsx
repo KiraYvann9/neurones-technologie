@@ -24,7 +24,7 @@ export const SliderComponent = () => {
             slidesPerView={1}
             pagination={{ clickable: true }}
             autoplay={{
-                delay: 7000,
+                delay: 5000,
                 disableOnInteraction: false,
             }}
             onSlideChange={() => console.log('slide change')}
@@ -35,8 +35,8 @@ export const SliderComponent = () => {
 
                     <SwiperSlide key={slider.id}  className={cn('relative z-0 min-h-screen bg-center bg-cover w-full border bg-no-repeat overflow-hidden', slider.img)}>
 
-                        <div className={'h-full w-full flex items-end absolute bottom-0'}>
-                            <div className={'w-[90%] sm:w-1/4 flex flex-col gap-2 ml-5 sm:ml-20 relative bottom-80 sm:bottom-96'}>
+                        <div className={'h-full bg-black/20 w-full flex items-end absolute bottom-0 '}>
+                            <div className={'w-[90%] md:w-[60%] xl:w-1/4 flex flex-col gap-2 ml-5 sm:ml-20 relative bottom-80 sm:bottom-96'}>
                                 <h1 className={'text-3xl text-custom-orange'}>{slider.title} </h1>
                                 <h2 className={'text-2xl text-white font-bold'}>{slider.subtitle}</h2>
                                 <p className={'text-white text-sm'}>{slider.text}</p>

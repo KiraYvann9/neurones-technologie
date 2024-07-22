@@ -5,7 +5,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 
-import {MaxWidthWrapper, MinWidthWrapper} from "@/components";
+import {MaxWidthWrapper, MinWidthWrapper, Rating} from "@/components";
 import {Clock} from "lucide-react";
 
 import {FormationDetail, formationDetailType} from "@/lib/formations";
@@ -34,7 +34,9 @@ export const FormationDetailComponent =()=>{
                                             <div className={'flex gap-8 p-4'}>
                                                 <div className={'flex flex-1 '}>{subformation.sousformation}</div>
                                                 <div className={'w-[220px] flex gap-2'}> <Clock size={36} className={'text-muted-foreground'}/> <p>{subformation.time}</p> </div>
-                                                <div className={'w-[250px]'}>{subformation.rating}</div>
+                                                <div>
+                                                    <Rating props={subformation.rating}/>
+                                                </div>
                                             </div>
                                         </AccordionContent>
                                     ))

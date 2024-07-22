@@ -9,11 +9,11 @@ export const TestimoniesComponent = () => {
       <div className={'w-auto h-auto bg-custom-black bg-testy-bg bg-right-bottom bg-contain bg-no-repeat'}>
           <MaxWidthWrapper className={'flex justify-center '}>
             <MinWidthWrapper className='w-full h-auto sm:h-[477]  py-8 px-16 space-y-8'>
-                <h1 className='text-xl text-white'>Témoignages de nos apprenants</h1>
+                <h1 className='text-3xl text-white'>Témoignages de nos apprenants</h1>
 
                 <div className='flex flex-col items-center sm:flex-row gap-4'>
                     <div
-                        className='border bg-white w-full sm:w-1/2 h-auto sm:h-[300px] p-4 flex flex-col justify-between items-end gap-2'>
+                        className='border bg-white w-full sm:w-1/2 h-auto sm:min-h-[300px] p-4 flex flex-col justify-between items-end gap-2'>
                         <div className='flex flex-col sm:flex-row gap-2 sm:gap-8'>
                             <div className={'mt-4'}>
                                 <Image src={'/assets/home/testy/girl.png'} height={157} width={157} alt=''
@@ -34,9 +34,11 @@ export const TestimoniesComponent = () => {
                                                 fill="#f99d1c"></path>
                                         </svg>
                                     </span>
-                                    Mon expérience de Formation chez Neurones Academy a été exceptionnel. J’ai en
-                                    quelques jours seulement changer mon approche de gestion des infrastructures IT de
-                                    mon organisation. Merci encore pour cette formation....
+                                    <span className='line-clamp-4'>
+                                        Mon expérience de Formation chez Neurones Academy a été exceptionnel. J’ai en
+                                        quelques jours seulement changer mon approche de gestion des infrastructures IT de
+                                        mon organisation. Merci encore pour cette formation....
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -49,13 +51,13 @@ export const TestimoniesComponent = () => {
                                         d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                                 </svg>
                             </div>
-                            <div className={'w-full overflow-x-scroll flex gap-4'}>
+                            <div className={'w-full flex gap-4'}>
                                 <span
-                                    className='p-2 bg-custom-orange text-[11px] rounded-md '>Formateur Expérimenté</span>
+                                    className='p-2 bg-custom-orange text-[11px] rounded-md text-center'>Formateur Expérimenté </span>
                                 <span
-                                    className='p-2 bg-custom-orange text-[11px] rounded-md'>Formateur Expérimenté</span>
-                                <span
-                                    className='p-2 bg-custom-orange text-[11px] rounded-md'>Formateur Expérimenté</span>
+                                    className='p-2 bg-custom-orange text-[11px] rounded-md text-center'>Ateliers pratiques adaptés</span>
+                                <span className='p-2 bg-custom-orange text-[11px] rounded-md text-center'>Cadre de formation Agréable</span>
+                                <span className='p-2 bg-custom-orange text-[11px] rounded-md text-center'>Suivi de qualité des apprenants</span>
                             </div>
                         </div>
 
@@ -65,7 +67,7 @@ export const TestimoniesComponent = () => {
                     </div>
 
                     <div
-                        className='border bg-white w-full sm:w-1/2 h-auto sm:h-[300px] p-4 flex flex-col justify-between items-end gap-2'>
+                        className='border bg-white w-full sm:w-1/2 h-auto sm:min-h-[300px] p-4 flex flex-col justify-between items-end gap-2'>
                         <div className='flex flex-col sm:flex-row gap-2 sm:gap-8'>
                             <div className={'mt-4'}>
                                 <Image src={'/assets/home/testy/boy.png'} height={157} width={157} alt=''
@@ -78,7 +80,7 @@ export const TestimoniesComponent = () => {
                                 <h1 className='text-custom-orange text-xl font-semibold'>Natacha Kouassi</h1>
                                 <p className={'font-semibold mb-2'}>Côte d&apos;Ivoire</p>
 
-                                <p className='text-sm flex flex-col'>
+                                <p className='text-sm flex flex-col line-clamp-3'>
                                     <span className={'inline-block w-10 h-10'}>
                                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -86,7 +88,10 @@ export const TestimoniesComponent = () => {
                                                 fill="#f99d1c"></path>
                                         </svg>
                                     </span>
-                                    J’ai été très impressionné par le caractère pratique de la formation. Un Coach calé dans son domaine, un cadre propice et des collègues apprenants tous exceptionnels. L’expert nous a vraiment facilité la.....
+                                    <span className='line-clamp-4'>
+
+                                        J’ai été très impressionné par le caractère pratique de la formation. Un Coach calé dans son domaine, un cadre propice et des collègues apprenants tous exceptionnels. L’expert nous a vraiment facilité la.....
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -99,13 +104,13 @@ export const TestimoniesComponent = () => {
                                         d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                                 </svg>
                             </div>
-                            <div className={'w-full overflow-x-scroll flex gap-4'}>
+                            <div className={'w-full flex gap-4'}>
                                 <span
-                                    className='p-2 bg-custom-orange text-[11px] rounded-md '>Formateur Expérimenté</span>
+                                    className='p-2 bg-custom-orange text-[11px] rounded-md text-center'>Accueil chaleureux des équipes</span>
                                 <span
-                                    className='p-2 bg-custom-orange text-[11px] rounded-md'>Formateur Expérimenté</span>
-                                <span
-                                    className='p-2 bg-custom-orange text-[11px] rounded-md'>Formateur Expérimenté</span>
+                                    className='p-2 bg-custom-orange text-[11px] rounded-md text-center'>Formateur Expérimenté</span>
+                                <span className='p-2 bg-custom-orange text-[11px] rounded-md text-center'>Groupe de formation bien animé</span>
+                                <span className='p-2 bg-custom-orange text-[11px] rounded-md text-center'>Suivi de qualité des apprenants</span>
                             </div>
                         </div>
 

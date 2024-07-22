@@ -62,7 +62,7 @@ export const InfiniteScroll = ({
             } else if (speed === "normal") {
                 containerRef.current.style.setProperty("--animation-duration", "40s");
             } else {
-                containerRef.current.style.setProperty("--animation-duration", "80s");
+                containerRef.current.style.setProperty("--animation-duration", "150s");
             }
         }
     };
@@ -84,9 +84,9 @@ export const InfiniteScroll = ({
             >
                 {items.map((item, idx) => (
                     <li
-                        className={'h-[62px] w-[169px] border-2 border-custom-orange flex justify-center items-center rounded-[40px] overflow-hidden'}
+                        className={'h-[100px] w-[186px] grayscale hover:grayscale-0 transition-all ease-in border shadow-md flex bg-white justify-center items-center rounded-[60px] overflow-hidden'}
                         key={1}>
-                        <Image src={item} alt={''} className={'h-[30px]'} height={30}/>
+                        <Image src={item} alt={''} className={''} height={70} width={102}/>
                     </li>
                 ))}
             </ul>

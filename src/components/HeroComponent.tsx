@@ -7,7 +7,7 @@ import {SliderComponent} from "@/components/SliderComponent";
 
 export const HeroComponent = () => {
     return (
-        <div className={'relative h-screen w-full border bg-no-repeat overflow-hidden'}>
+        <div className={'relative mt-10 lg:mt-14 h-screen max-h-[1100px] w-full border bg-no-repeat bg-center overflow-hidden'}>
 
             {/*<div className={'bg-gray-950/50 h-full w-full flex items-end'}>
                 <div className={'w-1/4 flex flex-col gap-2 ml-20 mb-10'}>
@@ -22,7 +22,7 @@ export const HeroComponent = () => {
             </div>*/}
 
             <SliderComponent/>
-            <CandidatureFormComponent className={'absolute bottom-10 z-20 left-5 sm:left-20'}/>
+            <CandidatureFormComponent className={'absolute bottom-10 lg:bottom-20 z-20 left-5 sm:left-20'}/>
 
         </div>
     );

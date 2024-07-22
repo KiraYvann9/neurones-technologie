@@ -1,15 +1,15 @@
 import {MinWidthWrapper} from "@/components/MinWidthWrapper";
 
-import enterprise from '../../../public/assets/formation_detail/icons/enterprise.png'
-import smil from '../../../public/assets/formation_detail/icons/smil.png'
-import prof from '../../../public/assets/formation_detail/icons/professional.png'
-import head from '../../../public/assets/formation_detail/icons/head.png'
-import exam from '../../../public/assets/formation_detail/icons/exam.png'
+import enterprise from '../../../public/assets/detail_cartegorie/icons/enterprise.png'
+import smil from '../../../public/assets/detail_cartegorie/icons/smil.png'
+import prof from '../../../public/assets/detail_cartegorie/icons/professional.png'
+import head from '../../../public/assets/detail_cartegorie/icons/head.png'
+import exam from '../../../public/assets/detail_cartegorie/icons/exam.png'
 import Image from "next/image";
 
 export const PourquoiComponent = () =>{
     return(
-        <div className={'w-full h-[436px] bg-formation-section8 bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center gap-16'}>
+        <div className={'w-full h-[436px] bg-gray-100 bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center gap-16'}>
 
             <MinWidthWrapper className={'w-full space-y-16'}>
 

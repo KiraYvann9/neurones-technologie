@@ -10,7 +10,7 @@ export const ActualiteComponent = () =>{
         <MaxWidthWrapper className={'w-full flex justify-center items-center h-auto sm:h-[578px]'}>
 
             <MinWidthWrapper className={'w-full p-2 py-8 sm:p-8 space-y-10'}>
-                <h1 className={'font-semibold text-2xl'}>Dernières actualités</h1>
+                <h1 className={'font-semibold text-3xl'}>Dernières actualités</h1>
                 <div className={'flex justify-between w-full flex-wrap sm:flex-nowrap gap-2'}>
                     {
                         actualiteData.map((actu: actualiteType) => (

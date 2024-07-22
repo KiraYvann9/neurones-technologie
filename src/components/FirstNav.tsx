@@ -26,9 +26,9 @@ export const FirstNav = () => {
     const pathname = usePathname()
 
     return (
-        <div className={'w-full sm:flex justify-center bg-black/85 hidden'}>
+        <div className={'w-full lg:flex justify-center bg-black/85 hidden'}>
             <MinWidthWrapper className={'w-full h-14 flex items-center justify-between text-white text-sm'}>
-                    <ul className={'flex gap-5 text-sm'}>
+                    <ul className={'flex gap-5 text-sm ml-[-18px]'}>
                         <li>Côte d&apos;Ivoire</li>
                         <li>Burkina Faso</li>
                         <li>Niger</li>
@@ -36,9 +36,11 @@ export const FirstNav = () => {
                     </ul>
 
                     <div className={'flex gap-4 items-center '}>
-                        <div className={'w-48 flex items-center border rounded-sm '}>
-                            <Input className={'border-none h-8 shadow-none pl-4 border-transparent focus:border-transparent'}/>
-                            <SearchIcon className={'text-muted-foreground'}/>
+                        <div className={'relative w-52 flex h-8 items-center border rounded-sm overflow-visible '}>
+                            <input className={'border-none h-full w-[99%] shadow-none pl-2 pr-8 border-transparent outline-none text-black'}/>
+                            <div className={'absolute -right-3 h-10 w-10 flex justify-center items-center rounded-full border-2 bg-black border-white'}>
+                                <SearchIcon className={'text-white'} size={24}/>
+                            </div>
                         </div>
                         <div className={'flex gap-5 items-center text-sm'}>
                             <Button variant={'secondary'} className={'text-sm'}>Catalogue</Button>

@@ -1,7 +1,7 @@
 import {MinWidthWrapper} from "@/components";
 
-import girl1 from "../../../public/assets/formation_detail/girl2.png"
-import boy from "../../../public/assets/formation_detail/boy.png"
+import girl1 from "../../../public/assets/detail_cartegorie/girl2.png"
+import boy from "../../../public/assets/detail_cartegorie/boy.png"
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
