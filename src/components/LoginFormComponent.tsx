@@ -22,7 +22,10 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 
+const base_url =  process.env.BASE_URL
+
 export const LoginFormComponent = () =>{
+
 
     const form = useForm<z.infer<typeof loginFormSchema>>({
         resolver : zodResolver(loginFormSchema),
@@ -31,12 +34,19 @@ export const LoginFormComponent = () =>{
             password: ''
         }
     })
-
+    
+    const signIn = async()=>{
+        const resp = await fetch('', {
+            
+        })
+    }
+    
     async function onSubmit(values: z.infer<typeof loginFormSchema>) {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
-            // const response = await register(values)
-        console.log(values)
+        // const response = await register(values)
+        console.log(base_url);
+        // console.log(values)
     }
 
     return(

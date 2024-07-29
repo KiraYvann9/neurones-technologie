@@ -23,6 +23,9 @@ import paa  from '../../public/assets/home/confiance/paa.png'
 import petroci  from '../../public/assets/home/confiance/petro.png'
 import sgbci  from '../../public/assets/home/confiance/sgbci.png'
 import uba  from '../../public/assets/home/confiance/uba.png'
+import orange from '../../public/assets/home/confiance/orange.jpeg'
+import ecobank from '../../public/assets/home/confiance/ecobank.png'
+import brvm from '../../public/assets/home/confiance/brvm.png'
 
 import fs from 'fs'
 import Image from 'next/image'
@@ -33,7 +36,7 @@ import Link from 'next/link'
 
 export const ConfianceComponent = () => {
 
-    const LOGOS = [africa_bank, ansut, armoirie, artci, axa, bceao, bnetd, bni, cgrae, cie, cnps, coris, lifetv, lonaci, moov, mtn, orang_bk, paa, petroci, sgbci, uba]
+    const LOGOS = [orange, ecobank, africa_bank, ansut, armoirie, artci, axa, bceao, bnetd, bni, cgrae, cie, cnps, coris, lifetv, lonaci, moov, mtn, orang_bk, paa, petroci, sgbci, uba, brvm]
 
     // fs.readdir(img_path, (err, files)=>{
     //     console.log('files :', files)
@@ -59,7 +62,7 @@ export const ConfianceComponent = () => {
                         }
                     </div>
 
-                    <Link href={'/references'} className='py-4 px-8 bg-black text-white rounded-md'>Consulter toutes nos référence</Link>
+                    <Link href={'/references'} className='py-2 px-4 bg-custom-blue hover:bg-custom-orange text-white rounded-md'>Consulter toutes nos référence</Link>
                 </MinWidthWrapper>
         </MaxWidthWrapper>
     </div>

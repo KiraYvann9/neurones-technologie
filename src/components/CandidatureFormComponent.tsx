@@ -26,6 +26,17 @@ import {
     FormLabel,
     FormMessage,
 } from "@/components/ui/form"
+
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+
 import { Input } from "@/components/ui/input"
 
 const formSchema = z.object({
@@ -64,7 +75,21 @@ export function CandidatureFormComponent({className}:{className?: string}) {
                         <FormItem>
                             <FormLabel>Votre spécialité</FormLabel>
                             <FormControl>
-                                <Input placeholder="..." {...field} className={'bg-gray-950 text-white'}/>
+                            <Select>
+                                <SelectTrigger className="w-full bg-gray-950 text-white ">
+                                    <SelectValue placeholder="Sélectionnez une spécialité" className='placeholder:text-[11px] placeholder:text-muted-foreground'/>
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                    {/* <SelectLabel>Fruits</SelectLabel> */}
+                                    <SelectItem value="ingénieur-sc">Ingénieur en Cybersécurité</SelectItem>
+                                    <SelectItem value="ingénieur-rs">Ingénieur réseaux et sécurité</SelectItem>
+                                    <SelectItem value="ingénieur-devops">Ingénieur DevOps</SelectItem>
+                                    <SelectItem value="ingénieur-devfull">Ingénieur Développeur Fullstack</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+                                {/* <Input placeholder="Sélectionnez une spécialité" {...field} className={'bg-gray-950 text-white placeholder:text-[11px]'}/> */}
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -88,7 +113,7 @@ export function CandidatureFormComponent({className}:{className?: string}) {
                                                 )}
                                             >
                                                 <CalendarIcon className="mr-2 h-4 w-4" />
-                                                {date ? format(date, "PPP") : <span>../../..</span>}
+                                                {date ? format(date, "PPP") : <span className='text-[11px]'>Période souhaitée</span>}
                                             </Button>
                                         </PopoverTrigger>
                                         <PopoverContent className="w-auto p-0">

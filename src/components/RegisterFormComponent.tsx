@@ -33,15 +33,49 @@ import {
 import React, { useState } from "react";
 import { RadioGroupItem, RadioGroup } from "./ui/radio-group";
 
+import { useMutation } from "@tanstack/react-query";
+
+
+
 
 
 export const RegisterFormComponent = () => {
+
+    const [showOTP, setShowOTP] = useState(false)
+
+    const register = async (user: any) =>{
+        const req = await fetch('http://192.168.8.83:8000/api/v1/register', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+
+        const response = await req.json()
+        return response
+    }
+
+    const mutation = useMutation({
+        mutationFn: (user: any) => register(user),
+        onSuccess: (resp) =>{
+            console.log('response :', resp.data)
+            setShowOTP(true)
+            //router.push('/dashboard')
+        },
+        onError: (resp)=>{
+            console.log(resp)
+        }
+    })
 
     const [selectedValue, setSelectedValue] = useState(true)
 
     async function onSubmit(values: z.infer<typeof particulierFormSchema>) {
     
         console.log(values)
+
+        mutation.mutate(values)
     }
 
     async function onEntrepriseSubmit(values: z.infer<typeof entrepriseFormSchema>){
@@ -61,6 +95,19 @@ export const RegisterFormComponent = () => {
             email: "",
             password: "",
         },
+    })
+
+    const enterpriseForm = useForm<z.infer<typeof entrepriseFormSchema>>({
+        resolver: zodResolver(entrepriseFormSchema),
+        defaultValues: {
+            company_name: '',
+            email:'',
+            company_email:'',
+            company_phone_number: '',
+            firstname:'',
+            password: '',
+            company_activity_area:''
+        }
     })
 
     const selectedOption=()=> {
@@ -83,7 +130,7 @@ export const RegisterFormComponent = () => {
                 </CardHeader>
                 
                 {
-                    selectedValue ? (
+                    selectedValue && !showOTP ? (
                         <Form {...form}>
                             <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
                                 <CardContent className="space-y-6 flex flex-col items-end">
@@ -213,11 +260,24 @@ export const RegisterFormComponent = () => {
                                             </FormItem>
                                             )}
                                     />
-                                    <div className="space-y-1 flex flex-col justify-between w-full">
-                                        <Label htmlFor="new">Confirmer Mot de passe : </Label>
-                                        <Input id="new" type="password" className={'py-6 bg-gray-50 '}
-                                                placeholder={'******'}/>
-                                    </div>
+                                    <FormField
+                                        control={form.control}
+                                        name="password_confirmation"
+                                        render={({ field }) => (
+                                            <FormItem className="space-y-1 flex flex-col justify-between w-full">
+                                                {/* <FormLabel>Username</FormLabel> */}
+                                                <FormLabel htmlFor="current">Confirmer Mot de passe : </FormLabel>
+                                                <div className={''}>
+                                                    <FormControl>
+                                                        <Input id="current" type="password"
+                                                                className={'py-6 bg-gray-50 w-full'}
+                                                                placeholder={'******'} {...field}/>
+                                                    </FormControl>
+                                                    <FormMessage/>
+                                                </div>
+                                            </FormItem>
+                                        )}
+                                    />
 
                                     <p className="text-sm text-center space-x-2 ">Votre mot de passe doit contenir au moins
                                         :
@@ -241,11 +301,11 @@ export const RegisterFormComponent = () => {
                             </form>
                         </Form>
                     ) : (
-                        <Form {...form}>
-                            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
+                        <Form {...enterpriseForm}>
+                            <form onSubmit={form.handleSubmit(onEntrepriseSubmit)} className="w-full">
                                 <CardContent className="space-y-6 flex flex-col items-end">
                                     <FormField
-                                        control={form.control}
+                                        control={enterpriseForm.control}
                                         name="user_type"
                                         render={({ field }) => (
                                             <FormItem className="space-y-1 flex justify-between w-full items-center mb-4">
@@ -280,8 +340,8 @@ export const RegisterFormComponent = () => {
                                             )}
                                     />
                                     <FormField
-                                        control={form.control}
-                                        name="firstname"
+                                        control={enterpriseForm.control}
+                                        name="company_name"
                                         render={({ field }) => (
                                             <FormItem className="space-y-1 flex flex-col justify-between w-full">
                                                 {/* <FormLabel>Username</FormLabel> */}
@@ -299,8 +359,8 @@ export const RegisterFormComponent = () => {
                                     />
 
                                     <FormField
-                                        control={form.control}
-                                        name="lastname"
+                                        control={enterpriseForm.control}
+                                        name="company_activity_area"
                                         render={({ field }) => (
                                             <FormItem className="space-y-1 flex flex-col justify-between w-full">
                                                 {/* <FormLabel>Username</FormLabel> */}
@@ -317,8 +377,8 @@ export const RegisterFormComponent = () => {
                                             )}
                                     />
                                     <FormField
-                                        control={form.control}
-                                        name="phone_number"
+                                        control={enterpriseForm.control}
+                                        name="company_phone_number"
                                         render={({ field }) => (
                                             <FormItem className="space-y-1 flex flex-col justify-between w-full">
                                                 {/* <FormLabel>Username</FormLabel> */}
@@ -335,7 +395,7 @@ export const RegisterFormComponent = () => {
                                             )}
                                     />
                                     <FormField
-                                        control={form.control}
+                                        control={enterpriseForm.control}
                                         name="email"
                                         render={({ field }) => (
                                             <FormItem className="space-y-1 flex flex-col justify-between w-full">
@@ -353,17 +413,17 @@ export const RegisterFormComponent = () => {
                                             )}
                                     />
                                     <FormField
-                                        control={form.control}
-                                        name="password"
+                                        control={enterpriseForm.control}
+                                        name="firstname"
                                         render={({ field }) => (
                                             <FormItem className="space-y-1 flex flex-col justify-between w-full">
                                                 {/* <FormLabel>Username</FormLabel> */}
                                                 <FormLabel htmlFor="current">Votre prénom : </FormLabel>
                                                 <div className={''}>
                                                     <FormControl>
-                                                        <Input id="current" type="password"
+                                                        <Input id="current" type="text"
                                                                 className={'py-6 bg-gray-50 w-full'}
-                                                                placeholder={'******'} {...field}/>
+                                                                placeholder={'...'} {...field}/>
                                                     </FormControl>
                                                     <FormMessage/>
                                                 </div>
@@ -371,17 +431,17 @@ export const RegisterFormComponent = () => {
                                             )}
                                     />
                                     <FormField
-                                        control={form.control}
-                                        name="password"
+                                        control={enterpriseForm.control}
+                                        name="lastname"
                                         render={({ field }) => (
                                             <FormItem className="space-y-1 flex flex-col justify-between w-full">
                                                 {/* <FormLabel>Username</FormLabel> */}
                                                 <FormLabel htmlFor="current">Votre nom : </FormLabel>
                                                 <div className={''}>
                                                     <FormControl>
-                                                        <Input id="current" type="password"
+                                                        <Input id="current" type="text"
                                                                 className={'py-6 bg-gray-50 w-full'}
-                                                                placeholder={'******'} {...field}/>
+                                                                placeholder={'...'} {...field}/>
                                                     </FormControl>
                                                     <FormMessage/>
                                                 </div>
@@ -389,17 +449,17 @@ export const RegisterFormComponent = () => {
                                             )}
                                     />
                                     <FormField
-                                        control={form.control}
-                                        name="password"
+                                        control={enterpriseForm.control}
+                                        name="fonction"
                                         render={({ field }) => (
                                             <FormItem className="space-y-1 flex flex-col justify-between w-full">
                                                 {/* <FormLabel>Username</FormLabel> */}
                                                 <FormLabel htmlFor="current">Votre fonction : </FormLabel>
                                                 <div className={''}>
                                                     <FormControl>
-                                                        <Input id="current" type="password"
+                                                        <Input id="current" type="text"
                                                                 className={'py-6 bg-gray-50 w-full'}
-                                                                placeholder={'******'} {...field}/>
+                                                                placeholder={'...'} {...field}/>
                                                     </FormControl>
                                                     <FormMessage/>
                                                 </div>
@@ -407,7 +467,7 @@ export const RegisterFormComponent = () => {
                                             )}
                                     />
                                     <FormField
-                                        control={form.control}
+                                        control={enterpriseForm.control}
                                         name="password"
                                         render={({ field }) => (
                                             <FormItem className="space-y-1 flex flex-col justify-between w-full">

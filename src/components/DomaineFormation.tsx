@@ -32,7 +32,7 @@ export const DomaineFormation = () => {
                 </div>
                 
             </MinWidthWrapper>
-            <Link href={'/domaine-formation'} className='text-white px-4 py-2 border flex rounded-md'>Voir tous nos domaine <ArrowRight size={22}/> </Link>
+            <Link href={'/domaine-formation'} className='text-white px-4 py-2 border flex rounded-md items-center'>Voir tous nos domaines <ArrowRight size={22}/> </Link>
         </div>
     );
 };

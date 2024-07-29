@@ -77,8 +77,8 @@ export const TestimoniesComponent = () => {
                             </div>
 
                             <div className={'flex flex-col flex-1'}>
-                                <h1 className='text-custom-orange text-xl font-semibold'>Natacha Kouassi</h1>
-                                <p className={'font-semibold mb-2'}>Côte d&apos;Ivoire</p>
+                                <h1 className='text-custom-orange text-xl font-semibold'>Mohamed Traore</h1>
+                                <p className={'font-semibold mb-2'}>Burkina Faso</p>
 
                                 <p className='text-sm flex flex-col line-clamp-3'>
                                     <span className={'inline-block w-10 h-10'}>
@@ -90,7 +90,7 @@ export const TestimoniesComponent = () => {
                                     </span>
                                     <span className='line-clamp-4'>
 
-                                        J’ai été très impressionné par le caractère pratique de la formation. Un Coach calé dans son domaine, un cadre propice et des collègues apprenants tous exceptionnels. L’expert nous a vraiment facilité la.....
+                                        J&apos;ai été très impressionné par le caractère pratique de la formation. Un Coach calé dans son domaine, un cadre propice et des collègues apprenants tous exceptionnels. L’expert nous a vraiment facilité la.....
                                     </span>
                                 </p>
                             </div>
@@ -119,7 +119,13 @@ export const TestimoniesComponent = () => {
                         </div>
                     </div>
                 </div>
+                <div className='w-full flex justify-between'>
+                    <div>
 
+                    </div>
+
+                    <Button className='bg-custom-blue hover:bg-custom-orange'> Voir tous témoignages </Button>
+                </div>
             </MinWidthWrapper>
           </MaxWidthWrapper>
       </div>

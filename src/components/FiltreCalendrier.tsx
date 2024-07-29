@@ -19,11 +19,11 @@ export const FiltreCalendrier = () =>{
             <div className="flex flex-col gap-6">
                 <Select>
                     <SelectTrigger className="w-full bg-white">
-                        <SelectValue placeholder="Select a fruit" />
+                        <SelectValue placeholder="Tous les domaines de formation" className="text-sm"/>
                     </SelectTrigger>
                     <SelectContent>
                         <SelectGroup>
-                        <SelectLabel>Fruits</SelectLabel>
+                        {/* <SelectLabel>Fruits</SelectLabel> */}
                         <SelectItem value="apple">Apple</SelectItem>
                         <SelectItem value="banana">Banana</SelectItem>
                         <SelectItem value="blueberry">Blueberry</SelectItem>
