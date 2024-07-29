@@ -36,6 +36,7 @@ import clock from '../../../../../public/assets/detail_formation/icons/clock.png
 
 import { Download, Heart, Lightbulb, Mail, Send, User } from 'lucide-react'
 import Image from 'next/image'
+import { PourquoiComponent } from '@/components/cartegorie'
 
 export default function FormationDetail () {
   return (
@@ -413,11 +414,11 @@ export default function FormationDetail () {
                 <TabsTrigger value="password" className='rounded-none text-xl'>Intra</TabsTrigger>
               </TabsList>
               <TabsContent value="account">
-                <Card className='rounded-none'>
+                <Card className='rounded-none space-y-8'>
                   <CardHeader className='w-full py-2 bg-custom-blue text-center text-xl text-white'>
                     <CardTitle>PRÉSENTIEL OU À DISTANCE</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-8 p-4">
+                  <CardContent className="space-y-10 p-4">
 
                     <div className='flex gap-4 items-center'>
                       <Image src={clock} alt=''width={32}/>
@@ -483,6 +484,7 @@ export default function FormationDetail () {
         </MinWidthWrapper>
 
         <DetailSession/>
+        <PourquoiComponent/>
       </MaxWidthWrapper>
     </div>
   )

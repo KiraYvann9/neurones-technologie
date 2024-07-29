@@ -34,11 +34,11 @@ export default function EditeurPage() {
 
                     <section className="w-full flex flex-col py-10 gap-4">
 
-                        <div className="w-full flex justify-start gap-4 flex-wrap p-10">
+                        <div className="w-full flex justify-start gap-4 flex-wrap py-10">
                             {
                                 editeurData.map((editeur: editeurType) =>(
-                                    <Link href={`/editeur/detail/${editeur.id}`} key={editeur.id} className={cn("rounded-md w-[150px] h-[120px] border flex justify-center items-center bg-white overflow-hidden drop-shadow-sm transition-all ease-in")}>
-                                        <Image src={editeur.imgUrl} width={98} height={98} alt="" className="h-auto"/>
+                                    <Link href={`/editeur/detail/${editeur.id}`} key={editeur.id} className={cn("rounded-md w-[24%] h-[150px] border flex justify-center items-center bg-white overflow-hidden drop-shadow-sm transition-all ease-in")}>
+                                        <Image src={editeur.imgUrl} width={120} height={108} alt="" className="h-auto"/>
                                     </Link>
                                 ))
                             }

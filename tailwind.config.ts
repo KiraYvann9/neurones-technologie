@@ -24,9 +24,9 @@ const config = {
     extend: {
 
       backgroundImage:{
-        'hero-bg': 'url("/assets/home/hero/img1.jpg")',
-        'hero-bg2': 'url("/assets/home/hero/img2.jpg")',
-        'hero-bg3': 'url("/assets/home/hero/img3.jpg")',
+        'hero-bg': 'url("/assets/home/hero/img1.webp")',
+        'hero-bg2': 'url("/assets/home/hero/img2.webp")',
+        'hero-bg3': 'url("/assets/home/hero/img3.webp")',
         'domaine-bg': 'url("/assets/home/bg-design/domaine.png")',
         'contact-bg': 'url("/assets/home/bg-design/contact.png")',
         'solution-bg': 'url("/assets/home/bg-design/solution.png")',

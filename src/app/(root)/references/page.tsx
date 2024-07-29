@@ -75,11 +75,11 @@ export default function References() {
                             </Select>
                         </div>
 
-                        <div className="w-full flex justify-start gap-4 flex-wrap p-10">
+                        <div className="w-full flex justify-between gap-4 flex-wrap py-10">
                             {
                                 referenceData.map((ref: referenceType) =>(
-                                    <div key={ref.id} className={cn("rounded-md w-[150px] h-[120px] border flex justify-center items-center bg-white overflow-hidden drop-shadow-sm transition-all ease-in")}>
-                                        <Image src={ref.imgUrl} width={98} height={98} alt="" className="h-auto"/>
+                                    <div key={ref.id} className={cn("rounded-md w-[24%] h-[150px] border flex justify-center items-center bg-white overflow-hidden drop-shadow-sm transition-all ease-in")}>
+                                        <Image src={ref.imgUrl} width={120} height={108} alt="" className="h-auto"/>
                                     </div>
                                 ))
                             }

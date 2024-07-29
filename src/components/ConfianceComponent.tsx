@@ -43,7 +43,7 @@ export const ConfianceComponent = () => {
     // })
 
   return (
-    <div className={'flex h-full w-full bg-confiance-bg bg-no-repeat bg-cover bg-center'}>
+    <div className={'flex h-full w-full bg-confiance-bg bg-no-repeat bg-cover bg-center justify-center'}>
         <MaxWidthWrapper className='flex w-full justify-center p-8 '>
 
                 <MinWidthWrapper className='w-full space-y-8 flex flex-col items-center'>

@@ -38,7 +38,7 @@ export const PourquoiComponent = () =>{
                     </div>
                     <div className={'w-1/4 flex flex-col justify-start items-center '}>
                         <Image src={exam} alt={''} height={90}/>
-                        <h1 className={'text-2xl'}>+200</h1>
+                        <h1 className={'text-2xl'}>+1</h1>
                         <span className={'text-xl text-center'}>centre d’examen agréé Pearson Vue pour des certifications de +300 éditeurs</span>
                     </div>
                 </div>

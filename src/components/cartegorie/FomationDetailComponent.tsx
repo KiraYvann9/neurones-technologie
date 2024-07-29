@@ -35,7 +35,7 @@ export const FormationDetailComponent =()=>{
                                                 <div className={'flex flex-1 '}>{subformation.sousformation}</div>
                                                 <div className={'w-[220px] flex gap-2'}> <Clock size={36} className={'text-muted-foreground'}/> <p>{subformation.time}</p> </div>
                                                 <div>
-                                                    <Rating props={subformation.rating}/>
+                                                    <Rating avis={subformation.rating}/>
                                                 </div>
                                             </div>
                                         </AccordionContent>

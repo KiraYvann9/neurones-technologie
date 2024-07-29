@@ -22,11 +22,12 @@ export const SliderComponent = () => {
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={50}
             slidesPerView={1}
+            loop={true}
             pagination={{ clickable: true }}
             autoplay={{
                 delay: 5000,
                 disableOnInteraction: false,
-            }}
+            }} 
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
         >
