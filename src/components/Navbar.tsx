@@ -44,6 +44,7 @@ import {
 } from "@/components/ui/accordion"
 
 import {MenuIcon, SearchIcon, ShoppingBagIcon, ShoppingCartIcon, UserIcon} from "lucide-react";
+import {MinWidthWrapper} from "@/components/MinWidthWrapper";
 const components: { title: string; href: string; description: string }[] = [
     {
         title: "Alert Dialog",
@@ -85,12 +86,11 @@ const components: { title: string; href: string; description: string }[] = [
 export function Navbar() {
     return (
         <div className={'bg-white w-full flex justify-center'}>
-            <MaxWidthWrapper className={'w-full flex gap-4 h-20 border-t items-center justify-between relative'}>
+            <MinWidthWrapper className={'w-full px-6 xl:p-0 flex gap-4 h-14 border-t items-center justify-between relative'}>
                 <Link href={'/'}>
-                    <Image src={logo} alt={'logo'} className={'hidden sm:block w-[150px]'}/>
-                    <Image src={logo} alt={'logo'} className={'w-[100px] sm:hidden'}/>
+                    <Image src={logo} alt={'logo'} className={'w-[120px]'}/>
                 </Link>
-                <NavigationMenu className={'hidden sm:block'}>
+                <NavigationMenu className={'hidden xl:block'}>
                     <NavigationMenuList>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>Domaines de formation</NavigationMenuTrigger>
@@ -159,36 +159,46 @@ export function Navbar() {
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
+                            <NavigationMenuTrigger>Vous êtes</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                    {components.map((component) => (
+                                        <ListItem
+                                            key={component.title}
+                                            title={component.title}
+                                            href={component.href}
+                                        >
+                                            {component.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
                             <Link href="/docs" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     Neurone Talents
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/docs" legacyBehavior passHref>
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    Vous êtes
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
+
                     </NavigationMenuList>
                 </NavigationMenu>
 
-                <div className={'flex space-x-5 ml-auto sm:mr-4 '}>
+                <div className={'flex space-x-5 ml-auto sm:mr-4 xl:hidden'}>
                     <Popover>
                         <PopoverTrigger asChild>
                             <SearchIcon size={26}/>
                         </PopoverTrigger>
-                        <PopoverContent className="w-full mt-5 z-5 border border-red-900">
+                        <PopoverContent className="w-full mt-3 xl:mt-5 z-40">
                             <div className="grid gap-4">
 
-                                <div className="grid gap-2">
-                                    <div className="grid grid-cols-3 items-center gap-4">
+                                <div className=" ">
+                                    <div className="grid grid-cols-3 items-center flex">
                                         <Input
                                             id="width"
-                                            defaultValue="100%"
-                                            className="col-span-2 h-8"
+                                            defaultValue="..."
+                                            className="col-span-3 h-8 w-full"
                                         />
                                     </div>
 
@@ -202,7 +212,7 @@ export function Navbar() {
                     <ShoppingCartIcon size={26}/>
                 </div>
 
-                <div className={'sm:hidden ml-auto'}>
+                <div className={'xl:hidden ml-auto'}>
                     <Sheet >
                         <SheetTrigger><MenuIcon size={40}/></SheetTrigger>
                         <SheetContent className={'bg-custom-blue border-none text-white'} side={'left'}>
@@ -242,7 +252,7 @@ export function Navbar() {
                         </SheetContent>
                     </Sheet>
                 </div>
-            </MaxWidthWrapper>
+            </MinWidthWrapper>
 
 
         </div>

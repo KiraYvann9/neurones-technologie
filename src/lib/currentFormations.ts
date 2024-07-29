@@ -22,7 +22,7 @@ export const currentFormation: currentFormationType[] = [
 
         date1: '3 jours / 27h',
         date2: '9 jours / 27h',
-        price: 25000,
+        price: 650_000,
         timeIcon: ClockIcon
     },
     {
@@ -46,7 +46,7 @@ export const currentFormation: currentFormationType[] = [
 
         date1: '3 jours / 27h',
         date2: '9 jours / 27h',
-        price: 25000,
+        price: 550_000,
         timeIcon: ClockIcon
     },
     {
@@ -58,7 +58,7 @@ export const currentFormation: currentFormationType[] = [
 
         date1: '3 jours / 27h',
         date2: '9 jours / 27h',
-        price: 25000,
+        price: 650_000,
         timeIcon: ClockIcon
     },
     {
@@ -70,7 +70,7 @@ export const currentFormation: currentFormationType[] = [
 
         date1: '3 jours / 27h',
         date2: '9 jours / 27h',
-        price: 25000,
+        price: 450_000,
         timeIcon: ClockIcon
     },
     {
@@ -82,7 +82,7 @@ export const currentFormation: currentFormationType[] = [
 
         date1: '3 jours / 27h',
         date2: '9 jours / 27h',
-        price: 25000,
+        price: 550_000,
         timeIcon: ClockIcon
     },
 ]

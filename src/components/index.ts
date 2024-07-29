@@ -19,6 +19,11 @@ import { ActualiteComponent} from "@/components/ActualiteComponent";
 
 import { LoginFormComponent } from "@/components/LoginFormComponent";
 import { RegisterFormComponent } from "@/components/RegisterFormComponent";
+import { Rating } from '@/components/rating'
+import { InfiniteScroll} from "@/components/InfinitScroll";
+
+import { FiltreCalendrier } from "./FiltreCalendrier";
+
 
 export {
     MaxWidthWrapper,
@@ -40,5 +45,9 @@ export {
     ActualiteComponent,
 
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    Rating,
+
+    InfiniteScroll,
+    FiltreCalendrier
 }

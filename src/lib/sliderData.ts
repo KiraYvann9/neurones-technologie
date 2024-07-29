@@ -11,8 +11,8 @@ export const sliderData: sliderType[] = [
     {
         id: 1,
         img : 'bg-hero-bg',
-        title:'Neurones Talents',
-        subtitle: 'Intégrez le programme',
+        title:'Intégrez le programme',
+        subtitle: 'Neurones Talents',
         text: 'Recyclez-vous sur des projets d’entreprises, obtenez des certifications internationales et obtenez un emploi garanti',
         alt : ''
     },

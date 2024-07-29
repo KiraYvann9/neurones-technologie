@@ -7,27 +7,28 @@ import Link from "next/link";
 import { FaFacebook } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io";
+import {Button} from "@/components/ui/button";
 
 
 export const FooterComponent = () =>{
     return(
 
-        <MaxWidthWrapper className={'w-full flex flex-col items-center bg-footer-bg bg-cover bg-center bg-no-repeat border-t'}>
-            <MinWidthWrapper className={'w-full '}>
-                <div className={'flex flex-wrap py-8 px-2 sm:px-10 justify-between gap-4 w-full'}>
-                    <div className={'space-y-4 w-[46%] sm:flex-1'}>
-                        <h1 className={'text-xl font-bold'}>Noter groupe</h1>
+        <MaxWidthWrapper className={'w-full flex flex-col items-center bg-footer-bg bg-cover bg-center bg-no-repeat border-t overflow-hidden'}>
+            <MinWidthWrapper className={'w-full'}>
+                <div className={'flex flex-wrap py-8 px-2 justify-between gap-4 w-full'}>
+                    <div className={' w-[46%] sm:flex-1'}>
+                        <h1 className={'text-xl font-bold mb-2'}>Noter groupe</h1>
                         <p className={'text-sm'}>Neurones Academy est de département
                             formation de l’entreprise panafricaine
                             Neurones Technologies SA
                         </p>
-                        <div className={'w-[130px] h-[70px] flex justify-center items-center overflow-hidden object-contain'}>
+                        <div className={'w-[130px] h-[70px]  flex justify-center items-center overflow-hidden object-contain'}>
                             <Image src={'/assets/logos/Logo_Neurones_logo.png'} alt={''} width={200} height={50} className={''}/>
                         </div>
                     </div>
                     <div className={'w-[46%] sm:flex-1'}>
                         <h1 className={'text-xl font-bold'}>Nos offres</h1>
-                        <ul className={'text-sm list-disc'}>
+                        <ul className={'text-sm list-[">"]'}>
                             <li>Intra-entreprise</li>
                             <li>Inter-entreprises</li>
                             <li>Sur-mesure</li>
@@ -51,7 +52,7 @@ export const FooterComponent = () =>{
                         <h1 className={'text-xl font-bold'}>Contactez-nous :</h1>
                         <div>
                             <strong>Côte d&apos;Ivoire</strong>
-                            <ul className={'text-sm'}>
+                            <ul className={'text-sm '}>
                                 <li>Angré, 8ème Tranche, Abidjan</li>
                                 <li>(+225) 27 22 42 90 90</li>
                                 <li>(+225 ) 07 88 88 61 61</li>
@@ -78,30 +79,30 @@ export const FooterComponent = () =>{
                         </div>
                     </div>
                 </div>
+
                 <Separator/>
 
-                <div className={'flex p-2 justify-between'}>
+                <div className={'flex w-full p-2 justify-between'}>
                     <Image src={'/assets/footer/fdp.png'} alt={''} width={90} height={40}/>
 
                     <div className={'flex items-center gap-4'}>
                         <span>Rejoignez-nous</span>
                         <div className={'flex space-x-2'}>
+                            <Link href={''}> <Button className={'p-0 rounded-full w-[28px] h-[28px] flex justify-center items-center'}> <BsLinkedin size={18}/></Button> </Link>
                             <Link href={''}><FaFacebook size={28}/></Link>
-                            <Link href={''}><BsLinkedin size={28}/></Link>
-                            <Link href={''}><IoLogoYoutube size={28}/></Link>
+                            <Link href={''}><Button className={'p-0 rounded-full w-[28px] h-[28px] flex justify-center items-center'}> <IoLogoYoutube size={18}/></Button></Link>
                         </div>
                     </div>
                 </div>
-
             </MinWidthWrapper>
 
             <MaxWidthWrapper className={'w-full h-10 flex justify-between items-center bg-custom-orange px-8 text-[10px] sm:text-[12px] sm:text-sm '}>
                 <span>© Neurones Academy - 2024</span>
                 <div className={'space-x-4 '}>
-                    <strong className={'whitespace-nowrap'}>Mentions légales</strong>
-                    <strong>CGU</strong>
-                    <strong>Cookies</strong>
-                    <strong>Plan du site</strong>
+                    <span className={'whitespace-nowrap'}>Mentions légales</span>
+                    <span>CGU</span>
+                    <span>Cookies</span>
+                    <span>Plan du site</span>
                 </div>
             </MaxWidthWrapper>
         </MaxWidthWrapper>
