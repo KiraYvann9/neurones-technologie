@@ -33,7 +33,7 @@ export default function Calendrier () {
 
                             <div>
                                 
-                                <span className="text-white">Gérer les projets avec MS Project</span>
+                                {/* <span className="text-white">Gérer les projets avec MS Project</span> */}
                             </div>
                         </div>
 
@@ -49,7 +49,7 @@ export default function Calendrier () {
 
                     <div className="flex flex-col gap-4">
 
-                        <div className="bg-gray-50 p-4 flex gap-4 items-center">
+                        <div className="bg-gray-100 p-4 flex gap-4 items-center">
                             <div className="w-3/4 space-y-4">
                                 <div>
                                     <span className="flex gap-2 font-semibold"> <Link/> Réf. : MP1001</span>
@@ -82,7 +82,7 @@ export default function Calendrier () {
                                 <Button className="bg-custom-blue">Consulter le programme</Button>
                             </div>
                         </div>
-                        <div className="bg-gray-50 p-4 flex gap-4 items-center">
+                        <div className="bg-gray-100 p-4 flex gap-4 items-center">
                             <div className="w-3/4 space-y-4">
                                 <div>
                                     <span className="flex gap-2 font-semibold"> <Link/> Réf. : MP1013</span>

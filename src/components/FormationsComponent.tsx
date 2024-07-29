@@ -40,7 +40,7 @@ export const FormationsComponent = () => {
                 <div className='flex gap-3.5'>
                   <div className='flex flex-1 flex-col h-full justify-between'>
                     <span className='text-[13px] '>{formation?.description}</span>
-                    <Link href={`/formation/${formation.id}`} className='bg-custom-orange p-2 text-sm mt-2 text-center'>Voir la formation</Link>
+                    <Link href={`/formation/${formation.id}`} className='bg-custom-orange hover:bg-custom-blue hover:text-white p-2 text-sm mt-2 text-center'>Voir la formation</Link>
                   </div>
 
                   <div className='flex flex-1 flex-col justify-between items-end h-full '>
@@ -88,7 +88,7 @@ export const FormationsComponent = () => {
                       </div>
                       <div className='flex flex-col gap-4 '>
                           <strong >{separateur(formation?.price, '.')}FCFA HT</strong>
-                          <span className={'text-sm'}>Demander un devis</span>
+                          <span className={'text-[12px] text-right'}>Demander un devis</span>
                       </div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export const FormationsComponent = () => {
           }
         </div>
         <div className={'w-full flex pr-8 justify-end'}>
-            <Button variant={'outline'} className='border bg-transparent text-white '>Découvrir le catalogue</Button>
+            <Link  href={'/calendrier'} className='border bg-transparent text-white hover:bg-custom-blue hover:text-white hover:border-none p-2 rounded-md text-sm'>Découvrir le calendrier de formation</Link>
         </div>
 
     </MinWidthWrapper>

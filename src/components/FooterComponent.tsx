@@ -9,6 +9,8 @@ import { BsLinkedin } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io";
 import {Button} from "@/components/ui/button";
 
+import { IoMdArrowDropright } from "react-icons/io";
+
 
 export const FooterComponent = () =>{
     return(
@@ -17,9 +19,9 @@ export const FooterComponent = () =>{
             <MinWidthWrapper className={'w-full'}>
                 <div className={'flex flex-wrap py-8 px-2 justify-between gap-4 w-full'}>
                     <div className={' w-[46%] sm:flex-1'}>
-                        <h1 className={'text-xl font-bold mb-2'}>Noter groupe</h1>
+                        <h1 className={'text-xl font-bold mb-2'}>Notre groupe</h1>
                         <p className={'text-sm'}>Neurones Academy est de département
-                            formation de l’entreprise panafricaine
+                            formation de l&apos;entreprise panafricaine
                             Neurones Technologies SA
                         </p>
                         <div className={'w-[130px] h-[70px]  flex justify-center items-center overflow-hidden object-contain'}>
@@ -28,23 +30,23 @@ export const FooterComponent = () =>{
                     </div>
                     <div className={'w-[46%] sm:flex-1'}>
                         <h1 className={'text-xl font-bold'}>Nos offres</h1>
-                        <ul className={'text-sm list-[">"]'}>
-                            <li>Intra-entreprise</li>
-                            <li>Inter-entreprises</li>
-                            <li>Sur-mesure</li>
-                            <li>Certifications internationales</li>
-                            <li>Neurones Talents</li>
+                        <ul className={'text-sm'}>
+                            <li className={'flex gap-1 items-center'}> <IoMdArrowDropright size={12}/> Intra-entreprise</li>
+                            <li className={'flex gap-1 items-center'}> <IoMdArrowDropright size={12}/>Inter-entreprises</li>
+                            <li className={'flex gap-1 items-center'}> <IoMdArrowDropright size={12}/>Sur-mesure</li>
+                            <li className={'flex gap-1 items-center'}> <IoMdArrowDropright size={12}/>Certifications internationales</li>
+                            <li className={'flex gap-1 items-center'}> <IoMdArrowDropright size={12}/>Neurones Talents</li>
                         </ul>
                     </div>
                     <div className={'w-[46%] sm:flex-1'}>
                         <h1 className={'text-xl font-bold'}>Liens utiles</h1>
                         <ul className={'text-sm list-disc'}>
                             <li>A propos de Neurones Academy</li>
-                            <li>Offres d’emplois</li>
+                            <li>Offres d&apos;emplois</li>
                             <li>Nos engagements RSE</li>
                             <li>FAQ</li>
-                            <li>Bulletin d’inscription</li>
-                            <li>Catalogue PDF</li>
+                            <li>Découvrir le calendrier de formation</li>
+                            <li>Catalogues PDF</li>
                             <li>Blog</li>
                         </ul>
                     </div>
@@ -88,9 +90,9 @@ export const FooterComponent = () =>{
                     <div className={'flex items-center gap-4'}>
                         <span>Rejoignez-nous</span>
                         <div className={'flex space-x-2'}>
-                            <Link href={''}> <Button className={'p-0 rounded-full w-[28px] h-[28px] flex justify-center items-center'}> <BsLinkedin size={18}/></Button> </Link>
-                            <Link href={''}><FaFacebook size={28}/></Link>
-                            <Link href={''}><Button className={'p-0 rounded-full w-[28px] h-[28px] flex justify-center items-center'}> <IoLogoYoutube size={18}/></Button></Link>
+                            <Link target='_blank' href={'https://www.linkedin.com/company/neuronesacademytech/?viewAsMember=true'}> <Button className={'p-0 rounded-full w-[28px] h-[28px] flex justify-center items-center'}> <BsLinkedin size={18}/></Button> </Link>
+                            <Link target="_blank" href={' https://web.facebook.com/profile.php?id=61561047366274'}><FaFacebook size={28}/></Link>
+                            <Link target="_blank" href={''}><Button className={'p-0 rounded-full w-[28px] h-[28px] flex justify-center items-center'}> <IoLogoYoutube size={18}/></Button></Link>
                         </div>
                     </div>
                 </div>

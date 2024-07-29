@@ -4,12 +4,13 @@ import {MinWidthWrapper} from "@/components/MinWidthWrapper";
 import {actualiteType, actualiteData} from "@/lib/actualitesData";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 export const ActualiteComponent = () =>{
     return(
         <MaxWidthWrapper className={'w-full flex justify-center items-center h-auto sm:h-[578px]'}>
 
-            <MinWidthWrapper className={'w-full p-2 py-8 sm:p-8 space-y-10'}>
+            <MinWidthWrapper className={'w-full p-2 py-8 sm:p-8 space-y-10 flex flex-col items-center'}>
                 <h1 className={'font-semibold text-3xl'}>Dernières actualités</h1>
                 <div className={'flex justify-between w-full flex-wrap sm:flex-nowrap gap-2'}>
                     {
@@ -23,12 +24,16 @@ export const ActualiteComponent = () =>{
 
                                 <p className={'text-[13px]'}>{actu.description}</p>
                                 <div >
-                                    <Link href={actu.url} className={'px-8 py-2 rounded-md text-sm text-center p-2 bg-custom-orange'}> Lire l&apos;article</Link>
+                                    <Link href={actu.url} className={'px-8 py-2 rounded-md text-sm text-center p-2 bg-custom-orange hover:bg-custom-blue hover:text-white'}> Lire l&apos;article</Link>
                                 </div>
 
                             </div>
                         ))
                     }
+
+                </div>
+                <div>
+                    <Button className="bg-custom-blue text-white hover:bg-custom-orange"> Consultez tous les articles</Button>
                 </div>
             </MinWidthWrapper>
         </MaxWidthWrapper>

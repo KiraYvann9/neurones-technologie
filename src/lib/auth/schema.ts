@@ -7,6 +7,7 @@ export const particulierFormSchema = z.object({
     firstname: z.string().min(2).max(50),
     lastname: z.string().min(2).max(50),
     phone_number: z.string().min(2).max(50),
+    password_confirmation: z.string().min(2).max(50),
     email: z.string().min(2).max(50),
     password: z.string().min(2).max(50),
 })
@@ -19,12 +20,13 @@ export const entrepriseFormSchema = z.object({
     lastname: z.string().min(2).max(50),
     phone_number: z.string().min(2).max(50),
     email: z.string().min(2).max(50),
+    company_email: z.string().min(2).max(50),
     password: z.string().min(2).max(50),
+    password_confirmation: z.string().min(2).max(50),
     fonction:z.string().min(2),
     company_name:z.string().min(2),
     company_activity_area:z.string().min(2),
     company_phone_number:z.string().min(2),
-    secteur_activite: z.string().min(2),
     nom_entreprise: z.string().min(2)
 })
 
